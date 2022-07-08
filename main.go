@@ -5,13 +5,17 @@ import (
 	"calendarme-backend/routes"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	// "log"
+	"log"
 	// "fmt"
-	// "os"
+	"os"
 	
 )
 
 func main() {
+	port := os.Getenv("PORT")
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 	// Set the router as the default one shipped with Gin
 	router := gin.Default()
 	router.Use(cors.Default())
@@ -24,7 +28,8 @@ func main() {
 //     log.Fatal(err)
 //   }
 	// router.Run(port)
-	router.Run(":3000")
+	// router.Run(":3000")
+	router.Run(":" + port)
 }
 
 // func getPort() (string, error) {
