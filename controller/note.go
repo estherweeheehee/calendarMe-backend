@@ -78,3 +78,20 @@ func SearchTags(c *gin.Context) {
 	})
 	}
 }
+
+func RetrieveAllTags(c *gin.Context) {
+	notes := []models.Note{}
+	config.DB.Select("tag").Find(&notes)
+	if len(notes) == 0 {
+		c.JSON(http.StatusNotFound, gin.H{
+			"status":  http.StatusNotFound,
+			"message": "Data not found",
+		})
+		return
+	} else {	c.JSON(http.StatusOK, gin.H{
+		"status":  http.StatusOK,
+		"message": "Found",
+		"data":    &notes,
+	})
+	}
+}

@@ -12,4 +12,5 @@ func NoteRoute(router *gin.Engine) {
 	router.PUT("/api/:id", controller.UpdateNote)
 	router.GET("api/:month", controller.FindNote)
 	router.GET("/searchtags/:tag", controller.SearchTags)
+	router.GET("/retrievealltags", controller.RetrieveAllTags)
 }
