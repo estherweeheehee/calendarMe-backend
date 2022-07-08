@@ -32,8 +32,6 @@ github.com/goccy/go-json/internal/encoder/vm_color_indent
 github.com/goccy/go-json/internal/encoder/vm_indent
 github.com/goccy/go-json/internal/errors
 github.com/goccy/go-json/internal/runtime
-# github.com/itsjamie/gin-cors v0.0.0-20220228161158-ef28d3d2a0a8
-## explicit
 # github.com/jackc/chunkreader/v2 v2.0.1
 ## explicit; go 1.12
 github.com/jackc/chunkreader/v2
@@ -71,15 +69,11 @@ github.com/jinzhu/now
 # github.com/json-iterator/go v1.1.12
 ## explicit; go 1.12
 github.com/json-iterator/go
-# github.com/kr/fs v0.1.0
-## explicit
-# github.com/kr/pretty v0.3.0
-## explicit; go 1.12
-# github.com/kr/text v0.2.0
-## explicit
 # github.com/leodido/go-urn v1.2.1
 ## explicit; go 1.13
 github.com/leodido/go-urn
+# github.com/lib/pq v1.10.6
+## explicit; go 1.13
 # github.com/mattn/go-isatty v0.0.14
 ## explicit; go 1.12
 github.com/mattn/go-isatty
@@ -95,12 +89,8 @@ github.com/pelletier/go-toml/v2
 github.com/pelletier/go-toml/v2/internal/ast
 github.com/pelletier/go-toml/v2/internal/danger
 github.com/pelletier/go-toml/v2/internal/tracker
-# github.com/pmezard/go-difflib v1.0.0
-## explicit
 # github.com/rogpeppe/go-internal v1.8.1
 ## explicit; go 1.16
-# github.com/tools/godep v0.0.0-20180126220526-ce0bfadeb516
-## explicit
 # github.com/ugorji/go/codec v1.2.7
 ## explicit; go 1.11
 github.com/ugorji/go/codec
@@ -135,8 +125,6 @@ golang.org/x/text/transform
 golang.org/x/text/unicode/bidi
 golang.org/x/text/unicode/norm
 golang.org/x/text/width
-# golang.org/x/tools v0.1.11
-## explicit; go 1.17
 # google.golang.org/protobuf v1.28.0
 ## explicit; go 1.11
 google.golang.org/protobuf/encoding/protowire
