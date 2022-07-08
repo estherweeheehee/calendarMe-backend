@@ -11,5 +11,5 @@ func NoteRoute(router *gin.Engine) {
 	router.DELETE("/api/:id", controller.DeleteNote)
 	router.PUT("/api/:id", controller.UpdateNote)
 	router.GET("api/:month", controller.FindNote)
-
+	router.GET("/searchtags/:tag", controller.SearchTags)
 }

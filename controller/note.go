@@ -29,13 +29,12 @@ func FindNote(c *gin.Context) {
 			"message": "Data not found",
 		})
 		return
-	}
-	c.JSON(http.StatusOK, gin.H{
+	} else {	c.JSON(http.StatusOK, gin.H{
 		"status":  http.StatusOK,
 		"message": "Found",
 		"data":    &notes,
 	})
-
+	}
 }
 
 func CreateNote(c *gin.Context) {
@@ -61,4 +60,21 @@ func UpdateNote(c *gin.Context) {
 	c.BindJSON(&note)
 	config.DB.Save(&note)
 	c.JSON(http.StatusOK, &note)
+}
+
+func SearchTags(c *gin.Context) {
+	notes := []models.Note{}
+	config.DB.Where("tag = ?", c.Param("tag")).Find(&notes)
+	if len(notes) == 0 {
+		c.JSON(http.StatusNotFound, gin.H{
+			"status":  http.StatusNotFound,
+			"message": "Data not found",
+		})
+		return
+	} else {	c.JSON(http.StatusOK, gin.H{
+		"status":  http.StatusOK,
+		"message": "Found",
+		"data":    &notes,
+	})
+	}
 }

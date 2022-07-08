@@ -5,9 +5,9 @@ import (
 	"calendarme-backend/routes"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"log"
-	"fmt"
-	"os"
+	// "log"
+	// "fmt"
+	// "os"
 	
 )
 
@@ -19,18 +19,19 @@ func main() {
 	routes.NoteRoute(router)
 
 	// Start and run the server
-	port, err := getPort()
-  	if err != nil {
-    log.Fatal(err)
-  }
-	router.Run(port)
+// 	port, err := getPort()
+//   	if err != nil {
+//     log.Fatal(err)
+//   }
+	// router.Run(port)
+	router.Run(":3000")
 }
 
-func getPort() (string, error) {
-	// the PORT is supplied by Heroku
-	port := os.Getenv("PORT")
-	if port == "" {
-	  return "", fmt.Errorf("$PORT not set")
-	}
-	return ":" + port, nil
-  }
+// func getPort() (string, error) {
+// 	// the PORT is supplied by Heroku
+// 	port := os.Getenv("PORT")
+// 	if port == "" {
+// 	  return "", fmt.Errorf("$PORT not set")
+// 	}
+// 	return ":" + port, nil
+//   }

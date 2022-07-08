@@ -1,1 +1,1 @@
-web: calendarme-backend
+web: bin/calendarme-backend
